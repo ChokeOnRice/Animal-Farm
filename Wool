@@ -1,0 +1,51 @@
+local function Wool()
+  for x = 1,5 do
+    turtle.forward()
+    turtle.select( 1 )
+    turtle.placeDown()
+  end
+  turtle.turnRight()
+  turtle.select( 1 )
+  turtle.placeDown()
+  turtle.forward()
+  turtle.select( 1 )
+  turtle.placeDown()
+  turtle.turnRight()
+  turtle.select( 1 )
+  turtle.placeDown()
+  for x = 1,5 do
+    turtle.forward()
+    turtle.select( 1 )
+    turtle.placeDown()
+  end
+end
+ 
+local function Turn()
+  turtle.turnLeft()
+  turtle.select( 1 )
+  turtle.placeDown()
+  turtle.forward()
+  turtle.select( 1 )
+  turtle.placeDown()
+  turtle.turnLeft()
+  turtle.select ( 1 )
+  turtle.placeDown()
+end
+ 
+turtle.up()
+turtle.forward()
+for x = 1,3 do
+  Wool()
+  Turn()
+end
+Wool()
+turtle.forward()
+turtle.forward()
+turtle.turnRight()
+for x = 1,7 do
+  turtle.forward()
+end
+turtle.down()
+turtle.turnRight()
+turtle.forward()
+ 
