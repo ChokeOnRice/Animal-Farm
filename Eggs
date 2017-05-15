@@ -1,0 +1,38 @@
+local function Suck()
+  for x = 1,5 do
+    turtle.suckDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  turtle.suckDown()
+  turtle.forward()
+  turtle.suckDown()
+  turtle.turnLeft()
+  for x = 1,5 do
+    turtle.suckDown()
+    turtle.forward()
+  end
+end
+ 
+local function Turn()
+  turtle.turnRight()
+  turtle.suckDown()
+  turtle.forward()
+  turtle.suckDown()
+  turtle.turnRight()
+end
+ 
+turtle.forward()
+for x = 1,3 do
+  Suck()
+  Turn()
+end
+Suck()
+turtle.forward()
+turtle.forward()
+turtle.turnLeft()
+for x = 1,7 do
+turtle.forward()
+end
+turtle.turnLeft()
+turtle.forward()
