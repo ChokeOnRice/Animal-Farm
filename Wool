@@ -3,6 +3,8 @@ local function Wool()
     turtle.forward()
     turtle.select( 1 )
     turtle.placeDown()
+    --Selects slot 1 to shear a sheep
+    --Places down to shear it and collect wool
   end
   turtle.turnRight()
   turtle.select( 1 )
@@ -13,10 +15,13 @@ local function Wool()
   turtle.turnRight()
   turtle.select( 1 )
   turtle.placeDown()
+  --As it turns, it shears and collects
+  --the wool
   for x = 1,5 do
     turtle.forward()
     turtle.select( 1 )
     turtle.placeDown()
+    --Same thing as the part above
   end
 end
  
@@ -30,22 +35,27 @@ local function Turn()
   turtle.turnLeft()
   turtle.select ( 1 )
   turtle.placeDown()
+  --Turns left, just the opposite side
 end
  
+--Actual functioning of the program
 turtle.up()
 turtle.forward()
 for x = 1,3 do
   Wool()
   Turn()
+  --Does all the functions 3 times
 end
 Wool()
 turtle.forward()
 turtle.forward()
 turtle.turnRight()
+--Last stretch of the way to return to the original
+-- Position
 for x = 1,7 do
   turtle.forward()
+  --Returning to the original position
 end
 turtle.down()
 turtle.turnRight()
 turtle.forward()
- 
