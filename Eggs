@@ -1,5 +1,7 @@
 local function Suck()
   for x = 1,5 do
+  --This moves forward 5 times and collects
+  --The eggs as it moves forward
     turtle.suckDown()
     turtle.forward()
   end
@@ -8,9 +10,11 @@ local function Suck()
   turtle.forward()
   turtle.suckDown()
   turtle.turnLeft()
+  --This makes the turtle turn and collect eggs
   for x = 1,5 do
     turtle.suckDown()
     turtle.forward()
+  --This is when the  turtle comes back
   end
 end
  
@@ -21,18 +25,26 @@ local function Turn()
   turtle.suckDown()
   turtle.turnRight()
 end
+--This is the turtle turning the other direction
+--I need this because the farm is an odd number
+--so it can't turn the other way
  
 turtle.forward()
 for x = 1,3 do
   Suck()
   Turn()
+  --The beginning of the actual program that makes the
+  --turtle move
 end
 Suck()
 turtle.forward()
 turtle.forward()
 turtle.turnLeft()
+--Returns it to the original position
 for x = 1,7 do
-turtle.forward()
+  turtle.forward()
 end
 turtle.turnLeft()
 turtle.forward()
+--This is the part where the turtle
+--returns to the original location
