@@ -1,0 +1,72 @@
+--I intentionally attacked only at certain times
+--Because i didnt want all my chicken to die
+local function Move()
+--Function to just move forward in the row
+  for x = 1,5 do
+    turtle.forward()
+    --Moves the turtle forward
+  end
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.turnLeft()
+  for x = 1,5 do
+    turtle.forward()
+  end
+  --Turns the turtle and makes it come back
+  --This part does not attack
+end
+ 
+local function Turn()
+--A function to make the turtle turn right
+  turtle.turnRight()
+  turtle.forward()
+  turtle.turnRight()
+end
+ 
+ 
+local function Hit()
+--Function to actually attack the chickens
+  for x = 1,5 do
+    turtle.forward()
+    turtle.attackDown()
+    turtle.suckDown()
+    --Attacks down and sucks the drops
+  end
+  turtle.turnLeft()
+  turtle.attackDown()
+  turtle.suckDown()
+  turtle.forward()
+  turtle.attackDown()
+  turtle.suckDown()
+  turtle.turnLeft()
+  turtle.attackDown()
+  turtle.suckDown()
+  --Allows the turtle to attack and suck the items
+  --while the turtle is turning
+  for x = 1,5 do
+    turtle.forward()
+    turtle.attackDown()
+    turtle.suckDown()
+  end
+end
+ 
+--Part of the program that actually move
+turtle.forward()
+Move()
+Turn()
+Hit()
+Turn()
+Move()
+Turn()
+Hit()
+--Functions to make the turtle move along the farm
+for x = 1,2 do
+  turtle.forward()
+end
+turtle.turnLeft()
+for x = 1,7 do
+  turtle.forward()
+end
+turtle.turnLeft()
+turtle.forward()
+--Returns it to the original location
